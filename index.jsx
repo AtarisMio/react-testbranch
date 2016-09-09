@@ -7,15 +7,16 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
-import Immutable from 'immutable';
-import configureStore from './service/Redux';
-import {HomePage} from './compontents/Homepage/HomePage.jsx';
+import {Map as immutable_Map} from 'immutable';
+import configureStore from './common/script/service/Redux';
+import {HomePage} from './compontents/Homepage/index.jsx';
 
-const initialState = Immutable.fromJS([{
+const initialState = immutable_Map({
     user: {
-        name: 'asudhiuashdn'
+        name: 'asudhiuashdn',
+        totalAvgInterest: 2.35
     }
-}]);
+});
 
 var $$$ = (selector)=>{
     var results = document.querySelectorAll(selector);

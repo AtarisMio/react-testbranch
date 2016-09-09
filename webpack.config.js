@@ -8,10 +8,6 @@ module.exports = {
         publicPath: 'dist/',
         filename: 'bundle.js'
     },
-    // output: {
-    //     path: path.resolve(__dirname, './dist'),
-    //     filename: 'bundle.js'
-    // },
     module: {
         loaders: [
             {
@@ -28,7 +24,7 @@ module.exports = {
                 }
             }, {
                 test: /\.css$/,
-                loader: 'style!css'
+                loader: 'style!css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!autoprefixer-loader' 
             }, {
                 test: /\.less$/,
                 loader: 'style!css!less'
@@ -38,4 +34,4 @@ module.exports = {
             }
         ]
     }
-};
+};      
